@@ -1,6 +1,6 @@
 node {
     stage('git download'){
-		git credentialsId: 'gitlab', url: 'http://35.223.128.153/root/kspro.git'
+		git credentialsId: 'gitlab', url: 'https://github.com/dots24/dot_webapp.git'
     }
     stage('clean') {	
          sh 'mvn clean'    
@@ -8,8 +8,8 @@ node {
     stage ('Code Scan')
     {
       sh 'mvn sonar:sonar \
-  -Dsonar.host.url=http://35.224.98.36:9000 \
-  -Dsonar.login=000b43bf0dceb307f16f6f9fb598868a13dc5f8e'
+  -Dsonar.host.url=http://34.123.123.129:9000 \
+  -Dsonar.login=1232b642b1cefdb7c8e6a91908383dcbe696af20'
     }
     stage('compile') {
         sh 'mvn compile'
