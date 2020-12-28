@@ -1,6 +1,6 @@
 node {
     stage('git download'){
-		git credentialsId: 'gitlab', url: 'https://github.com/dots24/dot_webapp.git'
+		git credentialsId: 'github', url: 'https://github.com/dots24/dot_webapp.git'
     }
     stage('clean') {	
          sh 'mvn clean'    
